@@ -21,7 +21,10 @@ const styles = {
 class TreeNode extends React.Component {
   render() {
     return (
-      <div className={this.props.classes.treeNodeRoot}>
+      <div
+        style={{ backgroundColor: this.props.color }}
+        className={this.props.classes.treeNodeRoot}
+      >
         <p className={this.props.classes.treeNodeContent}>{this.props.text}</p>
         {React.Children.only(this.props.children)}
       </div>
